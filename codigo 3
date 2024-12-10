@@ -1,0 +1,55 @@
+#include <iostream>
+#include <cmath>  
+using namespace std;
+
+
+void obtenerRangoNota(char letra) {
+    if (letra == 'A' || letra == 'a') {
+        cout << "La nota corresponde al rango: 90 - 100" << endl;
+    } else if (letra == 'B' || letra == 'b') {
+        cout << "La nota corresponde al rango: 80 - 89" << endl;
+    } else if (letra == 'C' || letra == 'c') {
+        cout << "La nota corresponde al rango: 70 - 79" << endl;
+    } else if (letra == 'D' || letra == 'd') {
+        cout << "La nota corresponde al rango: 60 - 69" << endl;
+    } else if (letra == 'F' || letra == 'f') {
+        cout << "La nota corresponde al rango: 0 - 59" << endl;
+    } else {
+        cout << "Letra invalida." << endl;
+    }
+}
+
+double calcularVolumenCilindro(double radio, double altura) {
+    return M_PI * pow(radio, 2) * altura;  
+}
+
+int main() {
+    int opcion;
+
+    cout << "Seleccione una opcion:" << endl;
+    cout << "1. Ingrese la nota." << endl;
+    cout << "2. Calcular volumen de un cilindro." << endl;
+    cout << "Opcion: ";
+    cin >> opcion;
+
+    if (opcion == 1) {
+        char letra;
+        cout << "Ingresa la letra de la calificación : ";
+        cin >> letra;
+        obtenerRangoNota(letra);
+    } 
+    else if (opcion == 2) {
+        double radio, altura;
+        cout << "Ingresa el radio de la base del cilindro: ";
+        cin >> radio;
+        cout << "Ingresa la altura del cilindro: ";
+        cin >> altura;
+        double volumen = calcularVolumenCilindro(radio, altura);
+        cout << "El volumen del cilindro es: " << volumen << " unidades cúbicas." << endl;
+    } 
+    else {
+        cout << "Opción inválida." << endl;
+    }
+
+    return 0;
+}
