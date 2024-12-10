@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char calificacion;
+
+    cout << "Ingrese la calificación : ";
+    cin >> calificacion;
+
+    if (calificacion == 'A') {
+        cout << "La calificación numérica es: 90-100\n";
+    } else if (calificacion == 'a') {
+        cout << "La calificación numérica es: 90-100\n";
+    } else if (calificacion == 'B') {
+        cout << "La calificación numérica es: 80-89\n";
+    } else if (calificacion == 'C') {
+        cout << "La calificación numérica es: 70-79\n";
+    } else if (calificacion == 'D') {
+        cout << "La calificación numérica es: 60-69\n";
+    } else if (calificacion == 'F') {
+
+        cout << "Entrada inválida. Por favor ingrese una calificación válida.\n";
+    }
+
+    return 0;
+}
+3.-
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    
+    int N, suma=0;
+    cout<<"ingrese el rango mayor: ";
+    cin>>N;
+    for(int i=2;i<=N;i=i+2)
+        suma=suma+i;
+    cout<<"la suma es: "<<suma;    
+
+    return 0;
+}
